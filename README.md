@@ -101,6 +101,43 @@ Mini vehicle separates the commands according to it’s capacity and abilities. 
 
 > Tip: Before final deployment, test each module (motors, IMU, ultrasonic, encoder) individually using provided test scripts to ensure proper wiring and functionality.
 
+## 🗣️ Azure Speaker Recognition ID Setup
+
+To ensure that only authorized users can control the vehicle, this project uses Microsoft Azure’s **Speaker Recognition API**. Each group member must be registered with a unique speaker profile.
+
+### 🧭 Steps to Create Speaker IDs
+
+1. **Create a Speech Service** on [Azure Portal](https://portal.azure.com).
+2. **Obtain your subscription key and region** (e.g., `westus`).
+3. **Run the following Python script** to create speaker profiles:
+
+```python
+import requests
+
+subscription_key = "YOUR_SUBSCRIPTION_KEY"
+region = "westus"  # or your specific region
+
+endpoint = f"https://{region}.api.cognitive.microsoft.com/spid/v1.0/identificationProfiles"
+headers = {
+    "Ocp-Apim-Subscription-Key": subscription_key,
+    "Content-Type": "application/json"
+}
+
+body = {
+    "locale": "en-us"  # Currently only 'en-us' is supported
+}
+
+response = requests.post(endpoint, headers=headers, json=body)
+
+if response.status_code in [200, 201]:
+    profile_id = response.json()["identificationProfileId"]
+    print(f"✅ Profile created! ID: {profile_id}")
+else:
+    print(f"❌ Error: {response.status_code} - {response.text}")
+
+
+
+
 
 Describe the steps required to install and set up the project. Include any prerequisites, dependencies, and commands needed to get the project running.
 
