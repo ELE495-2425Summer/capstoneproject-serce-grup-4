@@ -134,7 +134,7 @@ if response.status_code in [200, 201]:
     print(f"✅ Profile created! ID: {profile_id}")
 else:
     print(f"❌ Error: {response.status_code} - {response.text}")
-
+```
 
 
 
