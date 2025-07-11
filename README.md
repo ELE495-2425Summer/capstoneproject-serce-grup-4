@@ -15,7 +15,8 @@ Moreover, mini vehicle provides voice during the actions which is called as text
 Mini vehicle separates the commands according to it’s capacity and abilities. It responds to convenient commands with proper actions and voice. If command is inconvenient for requirements and abilities, vehicle states that circumstance. Raspberry PI 4 microcontroller is used for web applications, real-time status display, recognized speech, translated commands, and action history. An interface is developed for presentation of these applications. It is equipped with Wi-Fi communication. Therefore, standard communication protocol TCP is used. In addition, GPT AI Service is used for command interpretation. Manufacturing budget is constrained with 20.000 TL.
 
 ## Features
-List the key features and functionalities of the project.
+
+### Hardware Components
 
 - [Raspberry Pi 4 Model B - 4GB](https://robolinkmarket.com/raspberry-pi-4-model-b-4gb)
 - [L298N Motor Driver](https://robolinkmarket.com/l298n-motor-surucu-karti)
@@ -27,9 +28,13 @@ List the key features and functionalities of the project.
 - [Wi-Fi Router](https://www.vatanbilgisayar.com/tenda-mf3-150mbps-4g-lte-tasinabilir-kablosuz-n-router.html)
 - 4x [Lithium-Ion 21700 cells](https://robolinkmarket.com/tenpower-inr21700-50me-37v-5000-mah-li-ion-sarjli-pil-147a)
 - [Powerbank](https://www.vatanbilgisayar.com/anker-321-maggo-5-000mah-manyetik-powerbank-beyaz.html)
-
-- Hardware: The hardware components used (should be listed with links)
+- [Micro SD Card for Raspberry](https://www.vatanbilgisayar.com/samsung-evo-plus-64-gb-adaptorlu-hafiza-karti-160mb-s.html)
+- 4x [IR Speed Sensor](https://www.ubuy.com.tr/tr/product/5H92RF6-daoki-5pcs-speed-measuring-sensor-ir-infrared-slotted-optical-optocoupler-module-photo-interrupter-sensor-for-motor-speed-detection-or-arduino-with-en?ref=hm-google-redirect)
+- [4S BMS](http://robolinkmarket.com/4wd-cok-amacli-mobil-robot-platformu-seffaf)
+- 2x [Mobile Vehicle Platform](https://robolinkmarket.com/4wd-cok-amacli-mobil-robot-platformu-seffaf)
+  
 - Operating System and packages
+
 - Applications 
 - Services 
 
