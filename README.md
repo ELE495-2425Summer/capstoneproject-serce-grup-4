@@ -34,7 +34,7 @@ Mini vehicle separates the commands according to it’s capacity and abilities. 
 - 2x [Mobile Vehicle Platform](https://robolinkmarket.com/4wd-cok-amacli-mobil-robot-platformu-seffaf)
   
 ### Operating System & Software Stack
-- **OS:** Raspbian OS (Lite)
+- **OS:** [Raspbian OS (Lite)](https://www.raspberrypi.com/software/) 
 - **Language:** Python 3.10
 - **Core Libraries:**
   - `speech_recognition`, `gTTS`, `pygame`
@@ -63,8 +63,6 @@ Mini vehicle separates the commands according to it’s capacity and abilities. 
 - **Voice Feedback System:**  
   - gTTS and speaker output for interactive Turkish responses
 
-- Applications 
-- Services 
 
 ## Installation
 Describe the steps required to install and set up the project. Include any prerequisites, dependencies, and commands needed to get the project running.
