@@ -33,7 +33,35 @@ Mini vehicle separates the commands according to it’s capacity and abilities. 
 - [4S BMS](http://robolinkmarket.com/4wd-cok-amacli-mobil-robot-platformu-seffaf)
 - 2x [Mobile Vehicle Platform](https://robolinkmarket.com/4wd-cok-amacli-mobil-robot-platformu-seffaf)
   
-- Operating System and packages
+### Operating System & Software Stack
+- **OS:** Raspbian OS (Lite)
+- **Language:** Python 3.10
+- **Core Libraries:**
+  - `speech_recognition`, `gTTS`, `pygame`
+  - `openai`, `requests`, `pydantic`
+  - `numpy`, `RPi.GPIO`, `pigpio`, `smbus2`
+  - Optional: `Flask` for UI integration
+
+### System Modules
+- `main.py` – Main orchestrator for the control flow
+- `speech_io.py` – Voice input, Whisper transcription, GPT-4 text correction, and audio feedback
+- `speaker_verification.py` – Azure API integration for identifying registered users
+- `command_parser.py` – Converts speech text to structured JSON commands via GPT-4
+- `robot_executor.py` – Executes structured commands (e.g., move, turn, wait)
+- `controller.py` – GPIO motor control and PID regulation
+- `sensors.py` – Manages IMU, ultrasonic sensors, and wheel encoders
+- `kalman_filter.py` – 1D Kalman filter for position and velocity estimation
+
+### Services
+- **Azure Cognitive Services:**  
+  - Speaker verification to restrict access to authorized users
+- **OpenAI Whisper & GPT-4:**  
+  - Whisper transcribes speech to Turkish text  
+  - GPT-4 parses commands into structured JSON actions
+- **Socket-Based UI Communication:**  
+  - Real-time status logs and command updates sent to a UI over TCP
+- **Voice Feedback System:**  
+  - gTTS and speaker output for interactive Turkish responses
 
 - Applications 
 - Services 
