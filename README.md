@@ -65,6 +65,43 @@ Mini vehicle separates the commands according to it’s capacity and abilities. 
 
 
 ## Installation
+### Assembly Instructions
+
+1. **Chassis Setup:**
+   - Mount the 4 DC motors onto the two-layer mobile vehicle platform using the provided brackets and screws.
+   - Attach the wheels securely to the motors.
+   - Fix the L298N motor driver onto the chassis using double-sided tape or screws.
+
+2. **Motor Wiring:**
+   - Connect each motor’s wires to the L298N output terminals. Connections of keft and right motor's wires are in the same terminal. (OUT1–OUT4).
+   - Connect ENA, ENB, IN1–IN4 pins of L298N to Raspberry Pi GPIOs (refer to `controller.py` for the specific pins).
+
+3. **Battery and Power Management:**
+   - Connect 4x 21700 Lithium-Ion cells to the 4S BMS circuit.
+   - Use a step-down voltage regulator (optional) to safely power the L298N and motors.
+   - Power the Raspberry Pi using the Powerbank via USB-C.
+
+4. **Sensor Installation:**
+   - **MPU6050 IMU**: Connect via I2C (SDA/SCL) pins to Raspberry Pi (usually GPIO 2 and 3).
+   - **HC-SR04**: Mount on the front of the vehicle, and connect TRIG and ECHO pins to GPIO (e.g., 5 and 6).
+   - **IR Speed Sensors**: Position each sensor near a motor's wheel encoder for speed measurement. Connect signal pins to GPIO (e.g., 17 and 18).
+
+5. **Audio Interface:**
+   - Plug in the USB microphone and USB speaker into Raspberry Pi’s USB ports.
+   - Ensure the microphone is configured as the default audio input device.
+
+6. **Wi-Fi & Connectivity:**
+   - Set up the portable Wi-Fi router and connect the Raspberry Pi to its network.
+   - This allows remote access to the logging interface and command control.
+
+7. **Final Touches:**
+   - Insert the microSD card into the Raspberry Pi with the pre-installed OS and project files.
+   - Secure all wiring using zip ties and ensure no loose connections.
+   - Power on the system and verify all components are functional (motors spin, audio works, sensors respond).
+
+> Tip: Before final deployment, test each module (motors, IMU, ultrasonic, encoder) individually using provided test scripts to ensure proper wiring and functionality.
+
+
 Describe the steps required to install and set up the project. Include any prerequisites, dependencies, and commands needed to get the project running.
 
 ```bash
