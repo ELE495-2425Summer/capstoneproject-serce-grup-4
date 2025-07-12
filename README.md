@@ -226,7 +226,6 @@ python3 main.py
 ### User Interface (UI) Configuration
 
 This project includes a custom **Tkinter-based desktop GUI** that allows users to monitor and control the autonomous vehicle in real time. The interface connects to the Raspberry Pi over **SSH and TCP**, enabling both control and feedback.
----
 Before running the UI, ensure the following Python packages are installed on your **local machine (not Raspberry Pi)**:
 
 ```bash
