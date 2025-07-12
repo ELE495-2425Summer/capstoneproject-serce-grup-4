@@ -101,7 +101,7 @@ Mini vehicle separates the commands according to it’s capacity and abilities. 
 
 > Tip: Before final deployment, test each module (motors, IMU, ultrasonic, encoder) individually using provided test scripts to ensure proper wiring and functionality.
 
-## Resemblyzer Speaker Embedding Setup
+### Resemblyzer Speaker Embedding Setup
 
 To ensure that only authorized users can control the vehicle, this project uses **Resemblyzer**, an open-source speaker embedding library. Each group member is registered by computing an average embedding from multiple audio samples.
 
