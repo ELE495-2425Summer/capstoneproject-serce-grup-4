@@ -13,7 +13,7 @@ pc_ip = "192.168.0.2"
 def send_to_ui(message: str):
     try:
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        s.connect((pc_ip, 5050))  # Arayüzün çalıştığı bilgisayarın IP'si
+        s.connect((pc_ip, 5050))  
         s.sendall(message.encode())
         s.close()
     except Exception as e:
