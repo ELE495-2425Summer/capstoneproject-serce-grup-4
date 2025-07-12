@@ -37,7 +37,7 @@ Mini vehicle separates the commands according to it’s capacity and abilities. 
 - **OS:** [Raspbian OS (Lite)](https://www.raspberrypi.com/software/) 
 - **Language:** Python 3.10
 - **Core Libraries:**
-  - `speech_recognition`, `gTTS`, `pygame`
+  - `resemblyzer`, `gTTS`, `pygame`
   - `openai`, `requests`, `pydantic`
   - `numpy`, `RPi.GPIO`, `pigpio`, `smbus2`
   - Optional: `Flask` for UI integration
@@ -45,7 +45,7 @@ Mini vehicle separates the commands according to it’s capacity and abilities. 
 ### System Modules
 - `main.py` – Main orchestrator for the control flow
 - `speech_io.py` – Voice input, Whisper transcription, GPT-4 text correction, and audio feedback
-- `speaker_verification.py` – Azure API integration for identifying registered users
+- `speaker_verification.py` – Uses Resemblyzer for speaker embedding extraction and cosine similarity to verify if the speaker matches any of the registered users
 - `command_parser.py` – Converts speech text to structured JSON commands via GPT-4
 - `robot_executor.py` – Executes structured commands (e.g., move, turn, wait)
 - `controller.py` – GPIO motor control and PID regulation
@@ -101,43 +101,29 @@ Mini vehicle separates the commands according to it’s capacity and abilities. 
 
 > Tip: Before final deployment, test each module (motors, IMU, ultrasonic, encoder) individually using provided test scripts to ensure proper wiring and functionality.
 
-## 🗣️ Azure Speaker Recognition ID Setup
+## 🗣️ Resemblyzer Speaker Embedding Setup
 
-To ensure that only authorized users can control the vehicle, this project uses Microsoft Azure’s **Speaker Recognition API**. Each group member must be registered with a unique speaker profile.
+To ensure that only authorized users can control the vehicle, this project uses **Resemblyzer**, an open-source speaker embedding library. Each group member is registered by computing an average embedding from multiple audio samples.
 
-### 🧭 Steps to Create Speaker IDs
+### 🧭 Steps to Create Speaker Embeddings
 
-1. **Create a Speech Service** on [Azure Portal](https://portal.azure.com).
-2. **Obtain your subscription key and region** (e.g., `westus`).
-3. **Run the following Python script** to create speaker profiles:
+1. **Install Resemblyzer**:
+   ```bash
+   pip install resemblyzer
+   ```
+2. **Prepare your dataset**:
+   Create a folder structure like below:
+  ```
+kayitli_sesler_mono/
+    ├── eda/
+    │   ├── eda1.wav
+    │   ├── eda2.wav
+    ├── emre/
+    │   ├── emre1.wav
+    │   ├── emre2.wav
+    ...
 
-```python
-import requests
-
-subscription_key = "YOUR_SUBSCRIPTION_KEY"
-region = "westus"  # or your specific region
-
-endpoint = f"https://{region}.api.cognitive.microsoft.com/spid/v1.0/identificationProfiles"
-headers = {
-    "Ocp-Apim-Subscription-Key": subscription_key,
-    "Content-Type": "application/json"
-}
-
-body = {
-    "locale": "en-us"  # Currently only 'en-us' is supported
-}
-
-response = requests.post(endpoint, headers=headers, json=body)
-
-if response.status_code in [200, 201]:
-    profile_id = response.json()["identificationProfileId"]
-    print(f"✅ Profile created! ID: {profile_id}")
-else:
-    print(f"❌ Error: {response.status_code} - {response.text}")
-```
-
-
-
+  ``` 
 
 Describe the steps required to install and set up the project. Include any prerequisites, dependencies, and commands needed to get the project running.
 
