@@ -156,7 +156,10 @@ with open("saved_embeddings.pkl", "wb") as f:
 print("✅ Average embeddings saved for each speaker.")
 
  ```
+4. **Output**:
 
+A file named `saved_embeddings.pkl` will be created. This file contains the average voice embeddings of all registered users and will be used for real-time speaker verificati
+   
 
 Describe the steps required to install and set up the project. Include any prerequisites, dependencies, and commands needed to get the project running.
 
