@@ -358,5 +358,5 @@ We would like to thank the faculty and coordinators of the ELE 495 Senior Design
 - [Hasan Gökhan Okcuoğlu](https://github.com/GokhanOkcuoglu)
 - [İbrahim Emre Yerli](https://github.com/ieyerli)
 
-[Contributor 1](https://github.com/user1)
+
 [Resource or Tool](https://www.nvidia.com)
