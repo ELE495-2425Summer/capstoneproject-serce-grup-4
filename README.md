@@ -161,9 +161,46 @@ print("✅ Average embeddings saved for each speaker.")
 
 A file named `saved_embeddings.pkl` will be created. This file contains the average voice embeddings of all registered users and will be used for real-time speaker verification.
    
+### Software Installation on Raspberry Pi
 
-Describe the steps required to install and set up the project. Include any prerequisites, dependencies, and commands needed to get the project running.
+This section describes how to set up the software environment on your Raspberry Pi 4 to run the autonomous mini vehicle system.
+0. **Prerequisites**:  
 
+- Raspberry Pi 4 (4GB or higher)
+- A fresh installation of Raspberry Pi OS
+- Stable internet connection (via Wi-Fi or Ethernet)
+- A USB keyboard and HDMI monitor (for first-time setup, or use SSH)
+---
+
+1. **Clone the Repository**:  
+
+Open a terminal on your Raspberry Pi and run:
+
+```bash
+git clone https://github.com/username/autonomous-vehicle-nlp.git
+cd autonomous-vehicle-nlp
+```
+2. **Update the System**:
+
+```bash
+sudo apt update && sudo apt upgrade -y
+```
+3. **Install System Dependencies**:
+   
+These packages are required for audio processing, GPIO access, and I2C communication:
+```bash
+sudo apt install python3-pip python3-pyaudio python3-dev espeak \
+libportaudio2 libatlas-base-dev libffi-dev libnss3 libgpiod-dev \
+flac sox ffmpeg libsndfile1
+```
+4. **Install System Dependencies**:
+   
+Install Python packages listed in `requirements.txt:`
+
+```bash
+pip3 install -r requirements.txt
+```
+   
 ##
 ```bash
 # Example commands
