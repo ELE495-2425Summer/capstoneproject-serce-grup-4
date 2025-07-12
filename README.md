@@ -200,7 +200,23 @@ Install Python packages listed in `requirements.txt:`
 ```bash
 pip3 install -r requirements.txt
 ```
-   
+
+ 5. **Install System Dependencies**:
+
+Export your OpenAI and Azure credentials (add these to .bashrc or .profile to persist across reboots):
+```bash
+export OPENAI_API_KEY="Set Environment Variables"
+echo 'export OPENAI_API_KEY="your-openai-key"' >> ~/.bashrc
+```
+ 6. **Run the System**:
+
+Once everything is configured, start the system using:
+
+```bash
+python3 main.py
+```
+
+    
 ##
 ```bash
 # Example commands
