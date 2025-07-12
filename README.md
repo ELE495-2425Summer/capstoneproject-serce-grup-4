@@ -366,7 +366,6 @@ We would like to thank the faculty and coordinators of the ELE 495 Senior Design
 - [Pygame](https://www.pygame.org/news) – for playing TTS audio responses  
 - [RPi.GPIO](https://sourceforge.net/p/raspberry-gpio-python/wiki/Home/) & [pigpio](http://abyz.me.uk/rpi/pigpio/) – for motor and encoder control via GPIO  
 - [smbus2](https://pypi.org/project/smbus2/) – for I2C communication with MPU6050 IMU  
-- [Flask](https://flask.palletsprojects.com/) – optional: for REST API or simple web interface integration  
 - [Tkinter](https://docs.python.org/3/library/tkinter.html) – for creating the desktop user interface  
 - [Matplotlib](https://matplotlib.org/) – for GUI-based map and telemetry visualizations  
 - [Paramiko](https://www.paramiko.org/) – for remote SSH control of the Raspberry Pi  
