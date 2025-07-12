@@ -245,17 +245,10 @@ Run the UI script from your **local computer**:
 ```bash
 python3 ui.py
 ```
-
-
-
-
-    
-##
-```bash
-# Example commands
-git clone https://github.com/username/project-name.git
-cd project-name
-```
+Bu işlem şunları yapar:
+- Open a full-screen dashboard
+- Wait for TCP logs from the Raspberry Pi
+- Start/stop main.py on the Pi remotely via SSH
 
 ## Usage
 Provide instructions and examples on how to use the project. Include code snippets or screenshots where applicable.
