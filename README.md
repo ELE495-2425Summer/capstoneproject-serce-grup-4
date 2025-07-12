@@ -108,9 +108,9 @@ To ensure that only authorized users can control the vehicle, this project uses 
 ### 🧭 Steps to Create Speaker Embeddings
 
 1. **Install Resemblyzer**:
-   ```bash
-   pip install resemblyzer
-   ```
+```bash
+pip install resemblyzer
+ ```
 2. **Prepare your dataset**:
    Create a folder structure like below:
   ```
@@ -124,6 +124,39 @@ kayitli_sesler_mono/
     ...
 
   ``` 
+3. **Run the following script to compute average embeddings per speaker**:
+
+```pythonfrom resemblyzer import VoiceEncoder, preprocess_wav
+from pathlib import Path
+import numpy as np
+import pickle
+
+# Load the encoder model
+encoder = VoiceEncoder()
+
+# Directory containing subfolders for each speaker
+DATA_DIR = Path("kayitli_sesler_mono")
+speaker_embeddings = {}
+
+# Calculate average embedding per speaker
+for speaker_dir in DATA_DIR.iterdir():
+    if speaker_dir.is_dir():
+        embeddings = []
+        for wav_file in speaker_dir.glob("*.wav"):
+            wav = preprocess_wav(wav_file)
+            emb = encoder.embed_utterance(wav)
+            embeddings.append(emb)
+        if embeddings:
+            speaker_embeddings[speaker_dir.name] = np.mean(embeddings, axis=0)
+
+# Save embeddings
+with open("saved_embeddings.pkl", "wb") as f:
+    pickle.dump(speaker_embeddings, f)
+
+print("✅ Average embeddings saved for each speaker.")
+
+ ```
+
 
 Describe the steps required to install and set up the project. Include any prerequisites, dependencies, and commands needed to get the project running.
 
