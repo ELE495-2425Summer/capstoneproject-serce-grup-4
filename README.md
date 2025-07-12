@@ -208,13 +208,46 @@ Export your OpenAI and Azure credentials (add these to .bashrc or .profile to pe
 export OPENAI_API_KEY="Set Environment Variables"
 echo 'export OPENAI_API_KEY="your-openai-key"' >> ~/.bashrc
 ```
- 6. **Run the System**:
+ 6. **Transferring `saved_embeddings.pkl` to Raspberry Pi**:
+    
+If you have pre-trained speaker embeddings saved locally as `saved_embeddings.pkl`, you need to transfer this file to your Raspberry Pi so the system can recognize speakers offline or speed up verification.
+```bash
+scp saved_embeddings.pkl pi@192.168.x.x:~/autonomous-vehicle-nlp
+```
+    
+ 7. **Run the System**:
 
 Once everything is configured, start the system using:
 
 ```bash
 python3 main.py
 ```
+
+### User Interface (UI) Configuration
+
+This project includes a custom **Tkinter-based desktop GUI** that allows users to monitor and control the autonomous vehicle in real time. The interface connects to the Raspberry Pi over **SSH and TCP**, enabling both control and feedback.
+---
+Before running the UI, ensure the following Python packages are installed on your **local machine (not Raspberry Pi)**:
+
+```bash
+pip install paramiko matplotlib tkinter
+```
+In the UI script, update the following parameters to match your Raspberry Pi:
+
+```python
+RASPBERRY_IP = "192.168.x.x"        # your Raspberry Pi IP address
+RASPBERRY_USER = "bitirme"          # username on the Pi
+RASPBERRY_PASS = "xxxx"             # password for SSH login
+REMOTE_MAIN_PATH = "~/autonomous-vehicle-nlp/main.py"  # full path to main.py on Pi
+```
+**Run the UI**:
+
+Run the UI script from your **local computer**:
+```bash
+python3 ui.py
+```
+
+
 
     
 ##
