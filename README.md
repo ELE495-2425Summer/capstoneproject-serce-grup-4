@@ -250,7 +250,82 @@ Bu işlem şunları yapar:
 - Start/stop main.py on the Pi remotely via SSH
 
 ## Usage
-Provide instructions and examples on how to use the project. Include code snippets or screenshots where applicable.
+
+Once the hardware and software setup is complete, you can start using the system as follows:
+
+---
+
+### Step 1: Power On the Vehicle
+
+- Turn on the Raspberry Pi and ensure it’s connected to the same Wi-Fi network as your computer.
+- The motors, sensors, and speaker should all be correctly wired and powered via the battery system or powerbank.
+
+---
+
+### Step 2: Launch the Desktop Interface (on your PC)
+
+From your local machine, run:
+
+```bash
+python3 interface.py
+```
+
+This will open the **autonomous vehicle control dashboard** as shown below:
+
+![UI Screenshot](screenshots/ui_screenshot.png)
+
+**Key UI Components:**
+
+-  **Start / Stop / Reset** buttons (top):  
+  Used to remotely control `main.py` on the Raspberry Pi via SSH.
+
+-  **Command Eligibility Indicator (center top)**:  
+  Shows whether the system is ready to accept voice commands (`🟢 Komut Verilebilir`) or not (`🔴 Komut Verilemez`).
+
+- **Speaker Buttons (center)**:  
+  Highlights who gave the last valid command.
+
+-  **Command Logs (middle)**:  
+  - `Komut Durumu:` — internal status  
+  - `Sesli Verilen Komut:` — transcription result from Whisper  
+  - `Araca Verilen Komut:` — parsed and executed JSON command  
+  - `Araç Durumu:` — active task such as "moving forward", "waiting", or "turning"
+
+-  **Görev Geçmişi (left panel)**:  
+  A scrollable log of all previously executed commands.
+
+-  **Araç Haritası (right panel)**:  
+  Displays the robot’s orientation (yaw) and estimated forward position based on Kalman filtering.
+
+---
+
+###  Step 3: Give Voice Commands
+
+1. Speak in **Turkish** when prompted (e.g., "3 metre ileri git", "90 derece sola dön", "5 saniye bekle").
+2. The system will:
+   - Verify the speaker via Azure
+   - Transcribe the command with Whisper
+   - Parse the command via GPT-4
+   - Send it to the robot for execution
+3. Feedback will be shown on the UI and played through the speaker.
+
+---
+
+### 📡 Real-Time Data Flow
+
+- **main.py** on Raspberry Pi listens to microphone input and handles command logic.
+- It sends status logs to the desktop UI via TCP port **5050**.
+- It sends orientation and location data (yaw + distance) to the UI via port **5051**.
+
+---
+
+> ⚠️ Make sure `main.py` is running on the Raspberry Pi, and that your firewall allows connections on ports **5050** and **5051**.  
+> The Raspberry Pi must be connected to the **same network** as your PC.
+
+
+
+
+
 
 ## Screenshots
 Include screenshots of the project in action to give a visual representation of its functionality. You can also add videos of running project to YouTube and give a reference to it here. 
