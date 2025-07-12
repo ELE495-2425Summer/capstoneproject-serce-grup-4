@@ -28,7 +28,7 @@ def send_to_gui(yaw, distance):
     except Exception as e:
         print("UI bağlantı hatası:", e)
 
-openai.api_key = os.getenv("OPENAI_API_KEY", "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")
+openai.api_key = os.getenv("OPENAI_API_KEY", "sk-XX")
 
 def speak(text: str):
     tts = gTTS(text=text, lang='tr')
