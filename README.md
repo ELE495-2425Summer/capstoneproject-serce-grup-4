@@ -164,7 +164,7 @@ A file named `saved_embeddings.pkl` will be created. This file contains the aver
 ### Software Installation on Raspberry Pi
 
 This section describes how to set up the software environment on your Raspberry Pi 4 to run the autonomous mini vehicle system.
-0. **Prerequisites**:  
+**Prerequisites**:  
 
 - Raspberry Pi 4 (4GB or higher)
 - A fresh installation of Raspberry Pi OS
