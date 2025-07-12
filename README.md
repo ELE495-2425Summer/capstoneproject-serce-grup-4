@@ -345,7 +345,8 @@ Below are real-life images of the autonomous vehicle:
 
 Watch the full video demonstration on YouTube:
 
-[![Watch on YouTube]([https://img.youtube.com/vi/VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=VIDEO_ID_HERE](https://www.youtube.com/playlistlist=PLqFjsYCwdxEC5kf304XevFjM9bchKAfnd))
+[![Watch on YouTube][YouTube Playlist](https://www.youtube.com/playlist?list=PLqEjSWCxdxECSkf304KevfJM9bchKafnd)
+
 
 
 
