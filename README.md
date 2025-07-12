@@ -327,11 +327,30 @@ This will open the **autonomous vehicle control dashboard** as shown below:
 
 
 
-## Screenshots
-Include screenshots of the project in action to give a visual representation of its functionality. You can also add videos of running project to YouTube and give a reference to it here. 
+## 📸 Screenshots
+
+Below are real-life images of the autonomous vehicle:
+
+![Front View](screenshots/front_view.png)
+
+![Top View](screenshots/top_view.png)
+
+![Side View](screenshots/side_view.png)
+
+![Rear View](screenshots/rear_view.png)
+
+---
+
+### ▶️ Project Demonstration
+
+Watch the full video demonstration on YouTube:
+
+[![Watch on YouTube](https://img.youtube.com/vi/VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=VIDEO_ID_HERE)
+
+
 
 ## Acknowledgements
-Give credit to those who have contributed to the project or provided inspiration. Include links to any resources or tools used in the project.
+We would like to thank the faculty and coordinators of the ELE 495 Senior Design course at TOBB University of Economics and Technology for their continuous guidance and support.Special thanks to the lab instructors and assistants for providing the tools and infrastructure required for successful prototyping and testing.
 
 [Contributor 1](https://github.com/user1)
 [Resource or Tool](https://www.nvidia.com)
