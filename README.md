@@ -101,11 +101,11 @@ Mini vehicle separates the commands according to it’s capacity and abilities. 
 
 > Tip: Before final deployment, test each module (motors, IMU, ultrasonic, encoder) individually using provided test scripts to ensure proper wiring and functionality.
 
-## 🗣️ Resemblyzer Speaker Embedding Setup
+## Resemblyzer Speaker Embedding Setup
 
 To ensure that only authorized users can control the vehicle, this project uses **Resemblyzer**, an open-source speaker embedding library. Each group member is registered by computing an average embedding from multiple audio samples.
 
-### 🧭 Steps to Create Speaker Embeddings
+### Steps to Create Speaker Embeddings
 
 1. **Install Resemblyzer**:
 ```bash
@@ -126,7 +126,8 @@ kayitli_sesler_mono/
   ``` 
 3. **Run the following script to compute average embeddings per speaker**:
 
-```pythonfrom resemblyzer import VoiceEncoder, preprocess_wav
+```python
+from resemblyzer import VoiceEncoder, preprocess_wav
 from pathlib import Path
 import numpy as np
 import pickle
@@ -158,11 +159,12 @@ print("✅ Average embeddings saved for each speaker.")
  ```
 4. **Output**:
 
-A file named `saved_embeddings.pkl` will be created. This file contains the average voice embeddings of all registered users and will be used for real-time speaker verificati
+A file named `saved_embeddings.pkl` will be created. This file contains the average voice embeddings of all registered users and will be used for real-time speaker verification.
    
 
 Describe the steps required to install and set up the project. Include any prerequisites, dependencies, and commands needed to get the project running.
 
+##
 ```bash
 # Example commands
 git clone https://github.com/username/project-name.git
