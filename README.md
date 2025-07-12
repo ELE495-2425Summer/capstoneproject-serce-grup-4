@@ -358,5 +358,18 @@ We would like to thank the faculty and coordinators of the ELE 495 Senior Design
 - [Hasan Gökhan Okcuoğlu](https://github.com/GokhanOkcuoglu)
 - [İbrahim Emre Yerli](https://github.com/ieyerli)
 
-
-[Resource or Tool](https://www.nvidia.com)
+  ### • Resources and Tools
+- [Raspberry Pi Foundation](https://www.raspberrypi.org/) – for the development board and GPIO ecosystem  
+- [OpenAI Whisper](https://platform.openai.com/docs/guides/speech-to-text) & [GPT-4](https://platform.openai.com/docs/guides/gpt) – for Turkish speech transcription and natural language command parsing  
+- [Resemblyzer](https://github.com/resemble-ai/Resemblyzer) – for speaker verification using voice embeddings  
+- [gTTS](https://pypi.org/project/gTTS/) – for Turkish text-to-speech audio feedback  
+- [Pygame](https://www.pygame.org/news) – for playing TTS audio responses  
+- [RPi.GPIO](https://sourceforge.net/p/raspberry-gpio-python/wiki/Home/) & [pigpio](http://abyz.me.uk/rpi/pigpio/) – for motor and encoder control via GPIO  
+- [smbus2](https://pypi.org/project/smbus2/) – for I2C communication with MPU6050 IMU  
+- [Flask](https://flask.palletsprojects.com/) – optional: for REST API or simple web interface integration  
+- [Tkinter](https://docs.python.org/3/library/tkinter.html) – for creating the desktop user interface  
+- [Matplotlib](https://matplotlib.org/) – for GUI-based map and telemetry visualizations  
+- [Paramiko](https://www.paramiko.org/) – for remote SSH control of the Raspberry Pi  
+- [NumPy](https://numpy.org/) – for Kalman filtering and numerical operations  
+- [SpeechRecognition](https://pypi.org/project/SpeechRecognition/) – for local microphone recording and audio input control  
+- [FFmpeg](https://ffmpeg.org/) – for audio format compatibility (used by Whisper and gTTS)  
