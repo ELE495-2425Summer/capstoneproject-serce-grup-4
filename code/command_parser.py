@@ -6,7 +6,7 @@ import os
 
 from speech_io import send_to_ui
 
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY", "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"))
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY", "sk-XX))
 
 class RobotCommand(BaseModel):
     action: Optional[str]       = None
