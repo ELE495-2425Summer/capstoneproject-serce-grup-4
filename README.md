@@ -352,5 +352,11 @@ Watch the full video demonstration on YouTube:
 ## Acknowledgements
 We would like to thank the faculty and coordinators of the ELE 495 Senior Design course at TOBB University of Economics and Technology for their continuous guidance and support.Special thanks to the Dr. Ali Murat Demirtaş, Dr. Zeki Kocabıyıkoğlu and assistants for providing the tools and infrastructure required for successful prototyping and testing.
 
+### • Contributors
+- [Celal Bülent Cengiz](https://github.com/cbc15102)
+- [Eda Koç](https://github.com/edakoc22)
+- [Hasan Gökhan Okcuoğlu](https://github.com/GokhanOkcuoglu)
+- [İbrahim Emre Yerli](https://github.com/ieyerli)
+
 [Contributor 1](https://github.com/user1)
 [Resource or Tool](https://www.nvidia.com)
