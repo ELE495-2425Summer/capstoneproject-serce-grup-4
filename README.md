@@ -331,13 +331,13 @@ This will open the **autonomous vehicle control dashboard** as shown below:
 
 Below are real-life images of the autonomous vehicle:
 
-![Front View](screenshots/front_view.png)
+![Front View](screenshots/front_view.jpg)
 
-![Top View](screenshots/top_view.png)
+![Top View](screenshots/top_view.jpg)
 
-![Side View](screenshots/side_view.png)
+![Side View](screenshots/side_view.jpg)
 
-![Rear View](screenshots/rear_view.png)
+![Rear View](screenshots/rear_view.jpg)
 
 ---
 
