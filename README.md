@@ -53,8 +53,7 @@ Mini vehicle separates the commands according to it’s capacity and abilities. 
 - `kalman_filter.py` – 1D Kalman filter for position and velocity estimation
 
 ### Services
-- **[Azure Cognitive Services](https://portal.azure.com/#create/Microsoft.CognitiveServicesSpeechServices):**  
-  - Speaker verification to restrict access to authorized users
+
 - **[OpenAI Whisper & GPT-4](https://openai.com/tr-TR/index/whisper/):**  
   - Whisper transcribes speech to Turkish text  
   - GPT-4 parses commands into structured JSON actions
